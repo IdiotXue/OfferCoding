@@ -11,7 +11,7 @@ using std::vector;
  * 从1到n整数中1出现的次数
  * 思路
  * 找规律，书上讲得不清楚
- * 这篇文章的解释比价清晰：http://blog.csdn.net/yi_afly/article/details/52012593
+ * 这篇文章的解释比较清晰：http://blog.csdn.net/yi_afly/article/details/52012593
  * 核心是，分析每一位从0-9时，1会出现的次数，这样就能通过 进位次数×1出现次数，直接计算，而不需要
  * 对每个数字数1的个数
  */
