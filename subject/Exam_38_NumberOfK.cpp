@@ -9,12 +9,6 @@ using std::vector;
  * 思路
  * 两次二分搜索先找到这个数的头和尾，相减即可
  */
-struct ListNode
-{
-    int val;
-    struct ListNode *next;
-    ListNode(int x) : val(x), next(NULL) {}
-};
 class Solution
 {
   public:
