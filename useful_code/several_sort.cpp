@@ -2,6 +2,7 @@
 #include <vector>
 #include <functional> //greater
 #include <queue>      //priority_queue
+#include <unordered_map>
 #include <assert.h>
 using namespace std;
 
@@ -266,7 +267,42 @@ void SortLargeObj(vector<Comparable> &v)
         }
     }
 }
+/******************************** 拓扑（topological）排序 ********************************/
+/**
+ * 用于图论中对有向无环图（Directed Acyclic Graph）排序：如果存在v到w的一条路径，那么排序中v出现在w之前
+ * 核心思想：找出任意一个入度为0的顶点，取出该点，并将它和它的边从途中删除，此时会更新一些顶点的入度，对下一个
+ * 入度为0的定点做同样的操作
+ */
+// struct Vertex
+// {
+//     int indegree;
+//     int topoNum;
+// };
+// //v为存储定点的数组
+// void TopoSort(vector<Vertex> v)
+// {
+//     queue<Vertex> q;  //存放入度为0的顶点
+//     size_t count = 0; //记录排序过程使用了多少个顶底
 
+//     for (const auto &x : v)
+//         if (!x.indegree)
+//             q.push(x);
+//     while (!q.empty())
+//     {
+//         Vertex v = std::move(q.front());
+//         q.pop();
+//         v.topoNum = ++count;
+//         for 每一个指向的顶点w：
+//             if(!(--入度))
+//                 q.push(w);
+//     }
+//     if(count != v.size())
+//         throw exception("不是无环图");
+// }
+
+/**
+ * 打印数组
+ */
 template <typename Object>
 void PrintVec(const vector<Object> &v)
 {
